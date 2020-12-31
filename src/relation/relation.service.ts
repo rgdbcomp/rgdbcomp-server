@@ -87,6 +87,11 @@ export class RelationService {
     return this.db.execute(query)
   }
 
+  getMatchesByLeagueId(leagueId){
+    const query=`select *from matches where league_id=${leagueId};`
+    return this.db.execute(query)
+  }
+
   getTable(tableName){
     const query=`select * from ${tableName}`
     return this.db.execute(query)

@@ -351,6 +351,17 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "get matches by league id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
 		}
 	]
 }

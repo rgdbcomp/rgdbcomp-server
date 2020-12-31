@@ -176,6 +176,21 @@ export class RelationController {
     return obj;
   }
 
+  @Get('/league/:leagueId/matches')
+  async getMatchesByLeagueID(@Param('leagueId') leagueId){
+    const tables = ['matches'];
+    const t0 = performance.now();
+    const info = await this.relationService.getMatchesByLeagueId(leagueId);
+    const t1 = performance.now();
+    const obj = {
+      tables,
+      info,
+      time: t1 - t0,
+    };
+    return obj;
+  }
+
+
   @Get('/table/:tableName')
   getTable(@Param('tableName')tableName){
     return this.relationService.getTable(tableName)
