@@ -76,5 +76,32 @@ export class RelationService {
     const query=`select * from league inner join teams t on league.id = t.league_id where league.id=${leagueId}`
     return this.db.execute(query)
   }
+  getMatchInfoByWeek(weekNumber){
+    const query=`select * from matches inner join " referees_team" rt on matches.id = rt.match_id where matches.game_week=${weekNumber};
+`
+    return this.db.execute(query)
+  }
+
+  getPLayersByLeagueId(leagueId){
+    const query=`select p.* from players p inner join teams t on p.team_id = t.id where t.league_id=${leagueId};`
+    return this.db.execute(query)
+  }
+
+  getTable(tableName){
+    const query=`select * from ${tableName}`
+    return this.db.execute(query)
+  }
+  getTableInfo(tableName){
+    const query=`SELECT
+   table_name,
+   column_name,
+   data_type
+FROM
+   information_schema.columns
+WHERE
+   table_name = '${tableName}';`
+    return this.db.execute(query)
+  }
+
 
 }

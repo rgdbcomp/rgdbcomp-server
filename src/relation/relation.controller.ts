@@ -136,7 +136,7 @@ export class RelationController {
 
   @Get('/league/:leagueId/teams')
   async getTeamsByLeagueId(@Param('leagueId') leagueId){
-    const tables = ['none_player_contract',  'none_player_team_member'];
+    const tables = ['league',  'teams'];
     const t0 = performance.now();
     const info = await this.relationService.getNonePlayers(leagueId);
     const t1 = performance.now();
@@ -147,6 +147,45 @@ export class RelationController {
     };
     return obj;
   }
+
+  @Get('/match/week/:weekId')
+  async getMatchInfoByWeek(@Param('weekId') weekId){
+    const tables = ['match',  '" referees_team"'];
+    const t0 = performance.now();
+    const info = await this.relationService.getMatchInfoByWeek(weekId);
+    const t1 = performance.now();
+    const obj = {
+      tables,
+      info,
+      time: t1 - t0,
+    };
+    return obj;
+  }
+
+  @Get('/league/:leagueId/players')
+  async getPlayersByLeagueID(@Param('leagueId') leagueId){
+    const tables = ['players',  'league'];
+    const t0 = performance.now();
+    const info = await this.relationService.getPLayersByLeagueId(leagueId);
+    const t1 = performance.now();
+    const obj = {
+      tables,
+      info,
+      time: t1 - t0,
+    };
+    return obj;
+  }
+
+  @Get('/table/:tableName')
+  getTable(@Param('tableName')tableName){
+    return this.relationService.getTable(tableName)
+  }
+
+  @Get('/tableinfo/:tableName')
+  getTableInfo(@Param('tableName')tableName){
+    return this.relationService.getTableInfo(tableName)
+  }
+
 
 
 
