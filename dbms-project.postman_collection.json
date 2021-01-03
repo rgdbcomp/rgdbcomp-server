@@ -6,6 +6,320 @@
 	},
 	"item": [
 		{
+			"name": "graph",
+			"item": [
+				{
+					"name": "get players of one team Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/graph/match/1/players",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"graph",
+								"match",
+								"1",
+								"players"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get match by id Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/relation/match/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"relation",
+								"match",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get goals info Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/relation/match/1/goals",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"relation",
+								"match",
+								"1",
+								"goals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get foals from match Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/graph/matchinfo/1/foals",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"graph",
+								"matchinfo",
+								"1",
+								"foals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get exchange from match Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/relation/match/1/ex",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"relation",
+								"match",
+								"1",
+								"ex"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get players from team Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/relation/team/1/players",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"relation",
+								"team",
+								"1",
+								"players"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get players contract  by team id Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/relation/team/1/contract",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"relation",
+								"team",
+								"1",
+								"contract"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get team by id Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/relation/team/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"relation",
+								"team",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "none players by team id Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/relation/team/1/noneplayer",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"relation",
+								"team",
+								"1",
+								"noneplayer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get team by leage id Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/relation/league/1/teams",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"relation",
+								"league",
+								"1",
+								"teams"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get match info by week Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/relation/match/week/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"relation",
+								"match",
+								"week",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get players by league id Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/relation/league/1/players",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"relation",
+								"league",
+								"1",
+								"players"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get matches by league id Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "get players of one team",
 			"request": {
 				"method": "GET",
@@ -358,7 +672,21 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "http://127.0.0.1:3000/relation/league/1/matches",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"relation",
+						"league",
+						"1",
+						"matches"
+					]
 				}
 			},
 			"response": []

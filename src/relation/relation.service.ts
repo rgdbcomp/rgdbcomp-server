@@ -92,6 +92,11 @@ export class RelationService {
     return this.db.execute(query)
   }
 
+  getPlayersByTeamId(teamId){
+    const query=`select * from players where team_id=${teamId};`
+    return this.db.execute(query)
+  }
+
   getTable(tableName){
     const query=`select * from ${tableName}`
     return this.db.execute(query)

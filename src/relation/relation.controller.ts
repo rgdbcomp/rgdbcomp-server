@@ -138,7 +138,7 @@ export class RelationController {
   async getTeamsByLeagueId(@Param('leagueId') leagueId){
     const tables = ['league',  'teams'];
     const t0 = performance.now();
-    const info = await this.relationService.getNonePlayers(leagueId);
+    const info = await this.relationService.getTeamsByLeagueId(leagueId);
     const t1 = performance.now();
     const obj = {
       tables,
@@ -181,6 +181,20 @@ export class RelationController {
     const tables = ['matches'];
     const t0 = performance.now();
     const info = await this.relationService.getMatchesByLeagueId(leagueId);
+    const t1 = performance.now();
+    const obj = {
+      tables,
+      info,
+      time: t1 - t0,
+    };
+    return obj;
+  }
+
+  @Get('/team/:teamId/players')
+  async getPlayersByTeamId(@Param('teamID') teamId){
+    const tables = ['teams','players'];
+    const t0 = performance.now();
+    const info = await this.relationService.getMatchesByLeagueId(teamId);
     const t1 = performance.now();
     const obj = {
       tables,
