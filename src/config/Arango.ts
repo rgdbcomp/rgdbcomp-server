@@ -6,7 +6,8 @@ export class Arango {
 
   constructor() {
     this._db = new Database({
-      url: 'http://127.0.0.1:8529',
+      // url: 'http://127.0.0.1:8529',
+      url: 'http://45.82.138.169:8529',
     });
     this._db.useDatabase('dbms_project');
     this._db.useBasicAuth('root', 'test1234');

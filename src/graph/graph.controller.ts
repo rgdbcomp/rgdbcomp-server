@@ -97,7 +97,7 @@ export class GraphController {
       filter i.id=="${teamId}"
       for v,e,p in 0..2 outbound i graph "league_team_player"
       filter !(CONTAINS(v._id, "nonePlayerContract")or CONTAINS(v._id, "nonePlayer"))
-      return {"node":v._id,"from":e._from,"to":e._to}`
+      return {"node":v._id,"edge":{"from":e._from,"to":e._to}}`
     const graph=await this.arango.executeGetQuery(query)
 
     const obj = {
@@ -118,7 +118,7 @@ export class GraphController {
       filter i.id=="1"
       for v,e,p in 0..1 inbound i graph "league_team_player"
       filter !CONTAINS(v._id, "league")
-      return {"node":v._id,"from":e._from,"to":e._to}
+      return {"node":v._id,"edge":{"from":e._from,"to":e._to}}
       
 `
     const graph =await this.arango.executeGetQuery(query)
@@ -162,7 +162,7 @@ export class GraphController {
       filter i.id==${leagueId}
       for v,e,p in 0..1 outbound i graph "league_team_player"
       
-return {"node":v._id,"from":e._from,"to":e._to}`
+return {"node":v._id,"edge":{"from":e._from,"to":e._to}}`
 
     const graph=await this.arango.executeGetQuery(query)
     const obj = {
@@ -182,7 +182,7 @@ return {"node":v._id,"from":e._from,"to":e._to}`
       filter i.game_week=="${weekId}"
       for v,e,p in 0..1 outbound i graph "league_team_player"
       filter !CONTAINS(v._id, "team")
-      return {"node":v._id,"from":e._from,"to":e._to}
+      return {"node":v._id,"edge":{"from":e._from,"to":e._to}}
 
 `
     const graph=await this.arango.executeGetQuery(query)
@@ -203,7 +203,7 @@ return {"node":v._id,"from":e._from,"to":e._to}`
       filter i.id==${leagueId}
       for v,e,p in 0..2 outbound i graph "league_team_player"
       filter !CONTAINS(v._id, "nonePlayer")
-return {"node":v._id,"from":e._from,"to":e._to}
+return {"node":v._id,"edge":{"from":e._from,"to":e._to}}
 `
     const graph=await this.arango.executeGetQuery(query)
     const obj = {
