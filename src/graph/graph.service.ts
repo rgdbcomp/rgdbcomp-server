@@ -112,8 +112,8 @@ return v
 
   async getMatchByLeagueId(){
     const query=`for i in match
-let b=unset(i,"goalArr","foalArr","exArr")
-return b`
+    let b=unset(i,"goalArr","foalArr","exArr")
+    return b`
     return await this.arango.executeGetQuery(query)
   }
 
