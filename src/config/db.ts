@@ -5,7 +5,7 @@ export class Db {
   constructor() {
     this.db = new Pool({
       user: 'postgres',
-      host: 'localhost',
+      host: '45.82.138.169',
       database: 'dbms_project',
       password: 'test1234',
       port: 5432,
